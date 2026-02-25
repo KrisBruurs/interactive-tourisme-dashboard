@@ -13,4 +13,4 @@ dashboard: app.py data/transformed_tourism_data.csv
 	streamlit run app.py
 
 remove_data:
-	rm -f data/*.csv
+	python -c "import glob, os; [os.remove(f) for f in glob.glob('data/*.csv')]"
